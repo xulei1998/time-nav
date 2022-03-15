@@ -1,0 +1,297 @@
+/*  CSS reset  */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+ul,
+ol {
+  list-style: none;
+}
+a {
+  color: inherit;
+  text-decoration: none;
+}
+img {
+  max-width: 90%;
+  max-height: 90%;
+}
+/* style  */
+body {
+  background-color: #eee;
+  width: 100vw;
+  min-height: 100vh;
+
+  background-image: url(background.0e3547dc.jpg);
+  overflow-x: hidden;
+  position: relative;
+}
+.globalHeader {
+  margin: 20px 0;
+}
+@media (max-width: 500px) {
+  body {
+    padding: 1px;
+  }
+}
+@media (min-width: 500px) {
+  .globalHeader {
+    margin-top: 0;
+    margin-bottom: 100px;
+  }
+}
+
+.navBar {
+  padding: 20px 40px 50px 10px;
+}
+.navBar .navContainer {
+  padding-left: 20px;
+  text-align: center;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+.navBar .navContainer .navTime {
+  color: rgb(90, 88, 88);
+  font-weight: 700;
+}
+
+.navBar .navContainer a {
+  padding: 0 8px;
+  color: rgb(90, 88, 88);
+  font-weight: 700;
+}
+.navBar .navContainer a:hover {
+  color: rgb(56, 139, 207);
+  transition-property: all;
+  transition-duration: 0.8s;
+  transition-timing-function: ease;
+  transition-delay: 0s;
+}
+
+.searchForm {
+  display: flex;
+  justify-content: space-between;
+  border-radius: 30px 30px 30px 30px;
+  box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.3);
+}
+.searchForm:hover {
+  box-shadow: none;
+  transition-property: all;
+  transition-duration: 0.5s;
+  transition-timing-function: ease;
+  transition-delay: 0s;
+}
+@media (min-width: 500px) {
+  .searchForm {
+    max-width: 400px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+.searchForm > input {
+  width: 100%;
+  height: 46px;
+  margin-right: 0px;
+  padding: 0 20px;
+  border: 1px solid #ddd;
+  outline: none;
+  border-radius: 30px 0px 0px 30px;
+}
+.searchForm > button {
+  white-space: nowrap;
+  padding: 0 20px;
+  border: none;
+  border-radius: 0px 30px 30px 0px;
+  background-color: rgba(104, 181, 223, 1);
+  color: white;
+  font-size: 16px;
+  cursor: pointer; /*鼠标浮上去 是手型  */
+}
+.searchForm > button > svg {
+  width: 28px;
+  height: 28px;
+  display: flex;
+  justify-content: space-between;
+}
+.globalMain {
+  max-width: 920px;
+  margin-left: auto;
+  margin-right: auto;
+}
+.siteList {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 20px;
+  justify-content: space-between;
+  font-family: SF Pro Text, SF Pro Icons, Helvetica Neue, Helvetica, Arial,
+    sans-serif;
+}
+@media (min-width: 500px) {
+  .siteList {
+    margin-left: 0;
+    margin-right: -25px;
+    justify-content: flex-start;
+  }
+}
+.siteList > li {
+  margin-bottom: 10px;
+}
+@media (min-width: 500px) {
+  .siteList > li {
+    margin-right: 25px;
+    margin-bottom: 15px;
+  }
+}
+.siteList .site {
+  width: 160px;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  background-color: white;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  padding: 20px 0;
+  position: relative;
+  cursor: pointer;
+  box-shadow: 5px 5px 5px 5px rgba(0, 0, 0, 0.2);
+  transition: all 0.5s;
+  transition-property: all;
+  transition-duration: 0.5s;
+  transition-timing-function: ease;
+  transition-delay: 0s;
+}
+.siteList .site:hover {
+  box-shadow: none;
+  transition-property: all;
+  transition-duration: 0.5s;
+  transition-timing-function: ease;
+  transition-delay: 0s;
+}
+@media (max-width: 500px) {
+  .siteList .site {
+    width: 150px;
+  }
+}
+.siteList .site > .logo {
+  width: 64px;
+  height: 64px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 64px;
+}
+.siteList .site > .link {
+  font-size: 14px;
+  margin-top: 4px;
+}
+.siteList .site > .close {
+  position: absolute;
+  right: 6px;
+  top: 3px;
+  animation: deleteshow 1.5s 1;
+}
+@keyframes deleteshow {
+  0% {
+    opacity: 0;
+  }
+  10% {
+    opacity: 0.3;
+  }
+  55% {
+    opacity: 0.7;
+  }
+  100% {
+    opacity: 0.9;
+  }
+}
+@media (min-width: 500px) {
+  .siteList .site > .close {
+    display: none;
+    cursor: default;
+  }
+  .siteList .site:hover > .close {
+    display: block;
+  }
+}
+.siteList .addButton {
+  /*新增栏  */
+  width: 160px;
+  border: 1px solid #ddd;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding: 20px 0;
+  background-color: white;
+  border-radius: 4px;
+  box-shadow: 5px 5px 5px 5px rgba(0, 0, 0, 0.2);
+  transition: all 0.5s;
+  transition-property: all;
+  transition-duration: 0.5s;
+  transition-timing-function: ease;
+  transition-delay: 0s;
+}
+@media (max-width: 500px) {
+  .siteList .addButton {
+    width: 150px;
+  }
+}
+
+.siteList .addButton:hover {
+  cursor: pointer;
+  box-shadow: none;
+  transition-property: all;
+  transition-duration: 0.5s;
+  transition-timing-function: ease;
+  transition-delay: 0s;
+}
+.siteList .addButton .icon-wrapper {
+  width: 60px;
+  height: 60px;
+  margin: 2px 0px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.siteList .addButton .icon {
+  width: 64px;
+  height: 64px;
+}
+.siteList .addButton .text {
+  font-size: 14px;
+  margin-top: 4px;
+}
+.globalFooter .footerWrapper {
+  margin-top: 70px;
+  height: 30px;
+  line-height: 30px;
+  text-align: center;
+  color: rgb(90, 88, 88);
+  font-family: SF Pro Text, SF Pro Icons, Helvetica Neue, Helvetica, Arial,
+    sans-serif;
+}
+.globalFooter .footerWrapper a {
+  color: rgb(90, 88, 88);
+  font-weight: 600;
+}
+.globalFooter .footerWrapper a:hover {
+  color: rgb(56, 139, 207);
+  transition-property: all;
+  transition-duration: 0.5s;
+  transition-timing-function: ease;
+  transition-delay: 0s;
+}
+.globalFooter {
+  position: absolute;
+  bottom: 0px;
+  width: 100%;
+}
+
+
+/*# sourceMappingURL=style.314c1b23.css.map */
